@@ -1,0 +1,14 @@
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../zybo_audio_dsp.gen/sources_1/bd/bd_fir_filter_design/ipshared/c2c6" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_lmb_bram_1/sim/bd_fir_filter_design_lmb_bram_1.v" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_microblaze_0_xlconcat_1/sim/bd_fir_filter_design_microblaze_0_xlconcat_1.v" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_clk_wiz_1_1/bd_fir_filter_design_clk_wiz_1_1_clk_wiz.v" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_clk_wiz_1_1/bd_fir_filter_design_clk_wiz_1_1.v" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_axis_fir_filter_0_1/sim/bd_fir_filter_design_axis_fir_filter_0_1.v" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_mem_dump_sm_0_0/sim/bd_fir_filter_design_mem_dump_sm_0_0.v" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_phase_inc_sm_0_1/sim/bd_fir_filter_design_phase_inc_sm_0_1.v" \
+"../../../bd/bd_fir_filter_design/sim/bd_fir_filter_design.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

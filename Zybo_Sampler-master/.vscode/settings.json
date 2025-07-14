@@ -1,0 +1,16 @@
+{
+  "files.associations": {
+    "*.xdc": "tcl",
+    "*.cfg": "tcl",
+    "*.svh": "systemverilog",
+    ".jou": "tcl",
+    ".json": "jsonc",
+    "atomic": "c",
+    "cstdint": "c",
+    "freertos_cli.h": "c",
+    "serial_driver.h": "c"
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "python.analysis.extraPaths": ["scripts"]
+}

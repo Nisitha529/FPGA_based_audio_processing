@@ -1,0 +1,19 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../resources/dbfs_converter_tb.cpp in debug mode
+   Compiling ../../../resources/dbfs_converter.cpp in debug mode
+   Generating csim.exe
+Hello World!
+Linear value: -8.38861e+06. dBFS value: 0.
+Linear value: -8.38861e+06. dBFS value: 0.
+Linear value: -8.38861e+06. dBFS value: -1.19209e-06.
+Linear value: 8.38861e+06. dBFS value: -1.19209e-06.
+Linear value: 4.1943e+06. dBFS value: -6.0206.
+Linear value: -2.09715e+06. dBFS value: -12.0412.
+Linear value: 1.04858e+06. dBFS value: -18.0618.
+Linear value: -524288. dBFS value: -24.0824.
+Linear value: 1. dBFS value: -138.474.
+Linear value: -1. dBFS value: -138.474.
+Linear value: 0. dBFS value: 0.
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

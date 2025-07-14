@@ -1,0 +1,384 @@
+
+*** Running vivado
+    with args -log fir_filter_fixed_sample_dram.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir_filter_fixed_sample_dram.tcl
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source fir_filter_fixed_sample_dram.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1340.551 ; gain = 33.836 ; free physical = 363 ; free virtual = 8421
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/ip_repo/axis_fir_lpf_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/ip_repo/dbfs_converter'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: fir_filter_fixed_sample_dram
+Command: synth_design -top fir_filter_fixed_sample_dram -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 77339
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2155.258 ; gain = 412.746 ; free physical = 185 ; free virtual = 5302
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'fir_filter_fixed_sample_dram' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.gen/sources_1/ip/fir_filter_fixed_sample_dram/synth/fir_filter_fixed_sample_dram.vhd:70]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_DEPTH bound to: 32 - type: integer 
+	Parameter C_HAS_CLK bound to: 1 - type: integer 
+	Parameter C_HAS_D bound to: 1 - type: integer 
+	Parameter C_HAS_DPO bound to: 0 - type: integer 
+	Parameter C_HAS_DPRA bound to: 1 - type: integer 
+	Parameter C_HAS_I_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO bound to: 1 - type: integer 
+	Parameter C_HAS_QDPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QDPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_CE bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_RST bound to: 0 - type: integer 
+	Parameter C_HAS_QSPO_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_SPO bound to: 0 - type: integer 
+	Parameter C_HAS_WE bound to: 1 - type: integer 
+	Parameter C_MEM_INIT_FILE bound to: no_coe_file_loaded - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_MEM_TYPE bound to: 4 - type: integer 
+	Parameter C_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_QCE_JOINED bound to: 0 - type: integer 
+	Parameter C_QUALIFY_WE bound to: 0 - type: integer 
+	Parameter C_READ_MIF bound to: 0 - type: integer 
+	Parameter C_REG_A_D_INPUTS bound to: 0 - type: integer 
+	Parameter C_REG_DPRA_INPUT bound to: 0 - type: integer 
+	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
+	Parameter C_WIDTH bound to: 24 - type: integer 
+	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_14' declared at '/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.gen/sources_1/ip/fir_filter_fixed_sample_dram/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3191' bound to instance 'U0' of component 'dist_mem_gen_v8_0_14' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.gen/sources_1/ip/fir_filter_fixed_sample_dram/synth/fir_filter_fixed_sample_dram.vhd:136]
+INFO: [Synth 8-256] done synthesizing module 'fir_filter_fixed_sample_dram' (0#1) [/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.gen/sources_1/ip/fir_filter_fixed_sample_dram/synth/fir_filter_fixed_sample_dram.vhd:70]
+WARNING: [Synth 8-7129] Port sdpo[23] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[22] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[21] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[20] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[19] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[18] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[17] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[16] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[15] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[14] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[13] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[12] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[11] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[10] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[9] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[8] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[7] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[6] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[5] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[4] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[3] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[2] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[1] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdpo[0] in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ce in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qsdpo_clk in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qsdpo_ce in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qsdpo_rst in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qsdpo_srst in module sdpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[23] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[22] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[21] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[20] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[19] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[18] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[17] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[16] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[15] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[14] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[13] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[12] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[11] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[10] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[9] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[8] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[7] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[6] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[5] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[4] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[3] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[2] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[1] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[0] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[23] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[22] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[21] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[20] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[19] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[18] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[17] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[16] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[15] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[14] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[13] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[12] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[11] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[10] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[9] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[8] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[7] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[6] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[5] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[4] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[3] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[2] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[1] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[0] in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo_ce in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo_rst in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo_srst in module dist_mem_gen_v8_0_14_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ce in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo_ce in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo_ce in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo_clk in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo_rst in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo_rst in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo_srst in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo_srst in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 2233.195 ; gain = 490.684 ; free physical = 226 ; free virtual = 4960
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 2248.039 ; gain = 505.527 ; free physical = 225 ; free virtual = 4960
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 2248.039 ; gain = 505.527 ; free physical = 225 ; free virtual = 4960
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2248.039 ; gain = 0.000 ; free physical = 224 ; free virtual = 4961
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.gen/sources_1/ip/fir_filter_fixed_sample_dram/fir_filter_fixed_sample_dram_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.gen/sources_1/ip/fir_filter_fixed_sample_dram/fir_filter_fixed_sample_dram_ooc.xdc] for cell 'U0'
+Parsing XDC File [/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.runs/fir_filter_fixed_sample_dram_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.runs/fir_filter_fixed_sample_dram_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2352.789 ; gain = 0.000 ; free physical = 166 ; free virtual = 4918
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2352.824 ; gain = 0.000 ; free physical = 166 ; free virtual = 4918
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 176 ; free virtual = 4932
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 176 ; free virtual = 4932
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.runs/fir_filter_fixed_sample_dram_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 176 ; free virtual = 4932
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 168 ; free virtual = 4928
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port spo[23] in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[22] in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[21] in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[20] in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[19] in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[18] in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[17] in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[16] in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[15] in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[14] in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[13] in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spo[12] in module dist_mem_gen_v8_0_14 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 163 ; free virtual = 4925
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+-------------------------------------------------------------+----------------+----------------------+-------------+
+|Module Name | RTL Object                                                  | Inference      | Size (Depth x Width) | Primitives  | 
++------------+-------------------------------------------------------------+----------------+----------------------+-------------+
+|U0          | synth_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/ram_reg | User Attribute | 32 x 24              | RAM32M x 4  | 
++------------+-------------------------------------------------------------+----------------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 179 ; free virtual = 4948
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 179 ; free virtual = 4948
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+-------------------------------------------------------------+----------------+----------------------+-------------+
+|Module Name | RTL Object                                                  | Inference      | Size (Depth x Width) | Primitives  | 
++------------+-------------------------------------------------------------+----------------+----------------------+-------------+
+|U0          | synth_options.dist_mem_inst/gen_sdp_ram.sdpram_inst/ram_reg | User Attribute | 32 x 24              | RAM32M x 4  | 
++------------+-------------------------------------------------------------+----------------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 175 ; free virtual = 4945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 206 ; free virtual = 4961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 206 ; free virtual = 4961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 206 ; free virtual = 4961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 206 ; free virtual = 4961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 206 ; free virtual = 4961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 206 ; free virtual = 4961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |RAM32M |     4|
+|2     |FDRE   |    24|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 206 ; free virtual = 4961
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 81 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 2352.824 ; gain = 505.527 ; free physical = 771 ; free virtual = 5525
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 2352.824 ; gain = 610.312 ; free physical = 771 ; free virtual = 5525
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2352.824 ; gain = 0.000 ; free physical = 1055 ; free virtual = 5809
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2352.824 ; gain = 0.000 ; free physical = 1056 ; free virtual = 5812
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+
+Synth Design complete | Checksum: a28699f1
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 2352.824 ; gain = 934.617 ; free physical = 1056 ; free virtual = 5812
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1753.103; main = 1455.992; forked = 319.582
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3317.402; main = 2320.777; forked = 996.625
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2352.824 ; gain = 0.000 ; free physical = 1059 ; free virtual = 5815
+INFO: [Common 17-1381] The checkpoint '/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.runs/fir_filter_fixed_sample_dram_synth_1/fir_filter_fixed_sample_dram.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP fir_filter_fixed_sample_dram, cache-ID = 2abc4f3a59435052
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2376.801 ; gain = 0.000 ; free physical = 959 ; free virtual = 5735
+INFO: [Common 17-1381] The checkpoint '/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.runs/fir_filter_fixed_sample_dram_synth_1/fir_filter_fixed_sample_dram.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fir_filter_fixed_sample_dram_utilization_synth.rpt -pb fir_filter_fixed_sample_dram_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 14 17:57:27 2025...

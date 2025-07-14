@@ -1,0 +1,7 @@
+Running: xsim.dir/dbfs_converter/xsimk -simmode gui -wdb dbfs_converter.wdb -simrunnum 0 -socket 47767
+Design successfully loaded
+Design Loading Memory Usage: 23020 KB (Peak: 23168 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 109824 KB (Peak: 162288 KB)
+Simulation CPU Usage: 30 ms

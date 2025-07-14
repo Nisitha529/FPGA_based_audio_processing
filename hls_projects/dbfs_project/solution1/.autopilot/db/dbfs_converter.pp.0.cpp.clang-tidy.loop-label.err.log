@@ -1,0 +1,3 @@
+26 errors generated.
+Error while processing /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/.autopilot/db/dbfs_converter.pp.0.cpp.
+clang-tidy applied 130 of 130 suggested fixes.

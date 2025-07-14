@@ -1,0 +1,96 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                   Line: 921, Column: 31 }
+Function:        _ZN18log_apfixed_reduce5log10ILi48ELi24EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_921_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                   Line: 791, Column: 0 }
+Function:        _ZN18log_apfixed_reduce5log10ILi48ELi24EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_921_1
+  - String:          ''' ('
+  - LoopLoc:         '/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h:921:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'log_apfixed_reduce::log10<48, 24>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '48'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h, 
+                   Line: 1395, Column: 0 }
+Function:        _ZN3hls3absILi48ELi24EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ap_fixed<48, 24, (ap_q_mode)5, (ap_o_mode)3, 0> fabs_fixed<48, 24>(ap_fixed<48, 24, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_round_copysign_apfixed.h, 
+                       Line: 151, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_fixed<48, 24, (ap_q_mode)5, (ap_o_mode)3, 0> hls::abs<48, 24>(ap_fixed<48, 24, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h, 
+                       Line: 1395, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                   Line: 250, Column: 0 }
+Function:        _ZN18log_apfixed_reduce10log_traitsILi3EE15range_reductionILi38EEE9ap_ufixedILi25ELin12EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi44ELi7ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void log_apfixed_reduce::range_reduce<ap_fixed<44, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 38, 30>(ap_ufixed<38, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<44, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<30, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 145, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<25, -12, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log_traits<3>::range_reduction<38>(ap_ufixed<38, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<44, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 250, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                   Line: 250, Column: 0 }
+Function:        _ZN18log_apfixed_reduce10log_traitsILi3EE15range_reductionILi38EEE9ap_ufixedILi25ELin12EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi44ELi7ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void log_apfixed_reduce::range_reduce<ap_fixed<44, 7, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 30, 25>(ap_ufixed<30, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<44, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<25, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 145, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<25, -12, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log_traits<3>::range_reduction<38>(ap_ufixed<38, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<44, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 250, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                   Line: 791, Column: 0 }
+Function:        _ZN18log_apfixed_reduce5log10ILi48ELi24EEE8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ap_ufixed<25, -12, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log_traits<3>::range_reduction<38>(ap_ufixed<38, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<44, 7, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 250, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_fixed<48, 24, (ap_q_mode)5, (ap_o_mode)3, 0> log_apfixed_reduce::log10<48, 24>(ap_fixed<48, 24, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_log_apfixed.h, 
+                       Line: 791, Column: 0 }
+  - String:          ''''
+...

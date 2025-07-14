@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="dbfs_converter.hpp" path="/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/resources/dbfs_converter.hpp"/>
+    <originFiles name="dbfs_converter.cpp" path="/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/resources/dbfs_converter.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="dbfs_converter_tb.cpp" path="/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/resources/dbfs_converter_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

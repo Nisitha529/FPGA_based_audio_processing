@@ -1,0 +1,23 @@
+{
+    "1": {
+        "name": "log10<48, 24>",
+        "file": "\/tools\/Xilinx\/Vitis_HLS\/2023.2\/common\/technology\/autopilot\/etc\/hls_log_apfixed.h",
+        "fileloc": "800",
+        "instructions": "312",
+        "total_instructions": "312",
+        "calls": "",
+        "basicblocks": "33",
+        "loads": {
+            "G": "4"
+        }
+    },
+    "0": {
+        "name": "dbfs_converter",
+        "file": "dbfs_converter.cpp",
+        "fileloc": "3",
+        "instructions": "26",
+        "total_instructions": "338",
+        "calls": "1",
+        "basicblocks": "1"
+    }
+}

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Jul 14 13:55:54 2025
+# Process ID: 31467
+# Current directory: /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.runs/float_to_fixed_synth_1
+# Command line: vivado -log float_to_fixed.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source float_to_fixed.tcl
+# Log file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.runs/float_to_fixed_synth_1/float_to_fixed.vds
+# Journal file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.runs/float_to_fixed_synth_1/vivado.jou
+# Running On: nisitha-laptop, OS: Linux, CPU Frequency: 1799.916 MHz, CPU Physical cores: 4, Host memory: 16471 MB
+#-----------------------------------------------------------
+source float_to_fixed.tcl -notrace

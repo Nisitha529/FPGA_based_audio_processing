@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Jul 13 18:36:30 2025
+# Process ID: 223242
+# Current directory: /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/dbfs_converter/xsim_script.tcl}
+# Log file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/xsim.log
+# Journal file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/xsim.jou
+# Running On: nisitha-laptop, OS: Linux, CPU Frequency: 1674.924 MHz, CPU Physical cores: 4, Host memory: 16471 MB
+#-----------------------------------------------------------
+source xsim.dir/dbfs_converter/xsim_script.tcl
+source dbfs_converter.tcl

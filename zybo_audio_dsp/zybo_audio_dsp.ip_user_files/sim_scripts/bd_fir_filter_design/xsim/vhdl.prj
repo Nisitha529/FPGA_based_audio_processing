@@ -1,0 +1,13 @@
+vhdl xil_defaultlib  \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_microblaze_0_1/sim/bd_fir_filter_design_microblaze_0_1.vhd" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_dlmb_v10_1/sim/bd_fir_filter_design_dlmb_v10_1.vhd" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_ilmb_v10_1/sim/bd_fir_filter_design_ilmb_v10_1.vhd" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_dlmb_bram_if_cntlr_1/sim/bd_fir_filter_design_dlmb_bram_if_cntlr_1.vhd" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_ilmb_bram_if_cntlr_1/sim/bd_fir_filter_design_ilmb_bram_if_cntlr_1.vhd" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_microblaze_0_axi_intc_1/sim/bd_fir_filter_design_microblaze_0_axi_intc_1.vhd" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_mdm_1_1/sim/bd_fir_filter_design_mdm_1_1.vhd" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_rst_clk_wiz_1_100M_1/sim/bd_fir_filter_design_rst_clk_wiz_1_100M_1.vhd" \
+"../../../bd/bd_fir_filter_design/ip/bd_fir_filter_design_dds_compiler_0_0/sim/bd_fir_filter_design_dds_compiler_0_0.vhd" \
+
+# Do not sort compile order
+nosort

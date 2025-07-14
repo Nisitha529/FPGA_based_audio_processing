@@ -1,0 +1,95 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "dbfs_converter.cpp",
+    "fileloc": 3,
+    "instructions": 20,
+    "loads": {
+      "L": 2
+    },
+    "name": "dbfs_converter",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 850
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_round_copysign_apfixed.h",
+    "fileloc": 150,
+    "instructions": 17,
+    "loads": {
+      "L": 1
+    },
+    "name": "fabs_fixed<48, 24>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 17
+  },
+  "2": {
+    "basicblocks": 5,
+    "calls": "4 5",
+    "file": "hls_log_apfixed.h",
+    "fileloc": 250,
+    "instructions": 32,
+    "loads": {
+      "L": 5
+    },
+    "name": "range_reduction<38>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 96
+  },
+  "3": {
+    "basicblocks": 54,
+    "calls": "2",
+    "file": "hls_log_apfixed.h",
+    "fileloc": 790,
+    "instructions": 709,
+    "loads": {
+      "G": 2,
+      "L": 3
+    },
+    "name": "log10<48, 24>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 805
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.h",
+    "fileloc": 144,
+    "instructions": 33,
+    "loads": {
+      "G": 1,
+      "L": 1
+    },
+    "name": "range_reduce<ap_fixed<44, 7, AP_TRN, AP_WRAP, 0>, 4, 4, 38, 30>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 33
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_log_apfixed.h",
+    "fileloc": 144,
+    "instructions": 31,
+    "loads": {
+      "G": 1,
+      "L": 1
+    },
+    "name": "range_reduce<ap_fixed<44, 7, AP_TRN, AP_WRAP, 0>, 7, 6, 30, 25>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 31
+  }
+}

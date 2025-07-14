@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Jul 13 18:36:30 2025
+# Process ID: 223242
+# Current directory: /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/dbfs_converter/xsim_script.tcl}
+# Log file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/xsim.log
+# Journal file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/xsim.jou
+# Running On: nisitha-laptop, OS: Linux, CPU Frequency: 1674.924 MHz, CPU Physical cores: 4, Host memory: 16471 MB
+#-----------------------------------------------------------
+source xsim.dir/dbfs_converter/xsim_script.tcl
+# xsim {dbfs_converter} -autoloadwcfg -tclbatch {dbfs_converter.tcl}
+Time resolution is 1 ps
+source dbfs_converter.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 11 [0.00%] @ "125000"
+// RTL Simulation : 1 / 11 [100.00%] @ "375000"
+// RTL Simulation : 2 / 11 [100.00%] @ "615000"
+// RTL Simulation : 3 / 11 [100.00%] @ "855000"
+// RTL Simulation : 4 / 11 [100.00%] @ "1095000"
+// RTL Simulation : 5 / 11 [100.00%] @ "1335000"
+// RTL Simulation : 6 / 11 [100.00%] @ "1575000"
+// RTL Simulation : 7 / 11 [100.00%] @ "1815000"
+// RTL Simulation : 8 / 11 [100.00%] @ "2055000"
+// RTL Simulation : 9 / 11 [100.00%] @ "2295000"
+// RTL Simulation : 10 / 11 [100.00%] @ "2535000"
+// RTL Simulation : 11 / 11 [100.00%] @ "2775000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 2835 ns : File "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter.autotb.v" Line 262
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Jul 13 18:36:51 2025...

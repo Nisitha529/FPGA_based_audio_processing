@@ -1,0 +1,48 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'nisitha' on host 'nisitha-laptop' (Linux_x86_64 version 6.8.0-60-generic) on Sun Jul 13 18:38:04 +0530 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects'
+INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script '/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/export.tcl
+INFO: [HLS 200-1510] Running: open_project dbfs_project 
+INFO: [HLS 200-10] Opening project '/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project'.
+INFO: [HLS 200-1510] Running: set_top dbfs_converter 
+INFO: [HLS 200-1510] Running: add_files dbfs_project/resources/dbfs_converter.cpp 
+INFO: [HLS 200-10] Adding design file 'dbfs_project/resources/dbfs_converter.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files dbfs_project/resources/dbfs_converter.hpp 
+INFO: [HLS 200-10] Adding design file 'dbfs_project/resources/dbfs_converter.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb dbfs_project/resources/dbfs_converter_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file 'dbfs_project/resources/dbfs_converter_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_export -output=/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project
+INFO: [HLS 200-1510] Running: set_part xc7z010clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: config_export -output /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1373.043 ; gain = 37.836 ; free physical = 222 ; free virtual = 5573
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Jul 13 18:38:45 2025...
+INFO: [HLS 200-802] Generated output file dbfs_project/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 26.64 seconds. CPU system time: 1.41 seconds. Elapsed time: 41.31 seconds; current allocated memory: 5.754 MB.
+INFO: [HLS 200-112] Total CPU user time: 30.66 seconds. Total CPU system time: 1.84 seconds. Total elapsed time: 45.4 seconds; peak allocated memory: 318.105 MB.

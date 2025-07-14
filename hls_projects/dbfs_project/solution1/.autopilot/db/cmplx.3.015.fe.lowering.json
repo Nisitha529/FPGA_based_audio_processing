@@ -1,0 +1,29 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "dbfs_converter.cpp",
+    "fileloc": 3,
+    "instructions": 22,
+    "loads": {
+      "L": 1
+    },
+    "name": "dbfs_converter",
+    "total_instructions": 684
+  },
+  "1": {
+    "basicblocks": 54,
+    "calls": "",
+    "file": "hls_log_apfixed.h",
+    "fileloc": 790,
+    "instructions": 662,
+    "loads": {
+      "G": 4
+    },
+    "name": "log10<48, 24>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 662
+  }
+}

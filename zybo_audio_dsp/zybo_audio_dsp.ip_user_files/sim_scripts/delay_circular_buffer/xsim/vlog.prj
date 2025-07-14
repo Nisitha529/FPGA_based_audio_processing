@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../../zybo_audio_dsp.gen/sources_1/ip/delay_circular_buffer/sim/delay_circular_buffer.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

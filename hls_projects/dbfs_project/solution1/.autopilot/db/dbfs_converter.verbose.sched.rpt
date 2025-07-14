@@ -1,0 +1,338 @@
+
+
+================================================================
+== Vitis HLS Report for 'dbfs_converter'
+================================================================
+* Date:           Sun Jul 13 18:16:04 2025
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        dbfs_project
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z010-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.115 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       23|       23|  0.230 us|  0.230 us|   24|   24|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 24
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.06>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%linear_value_read = read i48 @_ssdm_op_Read.ap_auto.i48, i48 %linear_value" [dbfs_project/resources/dbfs_converter.cpp:3]   --->   Operation 25 'read' 'linear_value_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (3.10ns)   --->   "%sub_ln152 = sub i48 0, i48 %linear_value_read" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_round_copysign_apfixed.h:152->/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1396->dbfs_project/resources/dbfs_converter.cpp:7]   --->   Operation 26 'sub' 'sub_ln152' <Predicate = true> <Delay = 3.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp = bitset i48 @_ssdm_op_BitSet.i48.i48.i32.i1, i48 %sub_ln152, i32 47, i1 0" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_round_copysign_apfixed.h:153->/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1396->dbfs_project/resources/dbfs_converter.cpp:7]   --->   Operation 27 'bitset' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_50 = bitselect i1 @_ssdm_op_BitSelect.i1.i48.i32, i48 %linear_value_read, i32 47" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_round_copysign_apfixed.h:154->/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1396->dbfs_project/resources/dbfs_converter.cpp:7]   --->   Operation 28 'bitselect' 'tmp_50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.96ns)   --->   "%select_ln154 = select i1 %tmp_50, i48 %tmp, i48 %linear_value_read" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_round_copysign_apfixed.h:154->/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1396->dbfs_project/resources/dbfs_converter.cpp:7]   --->   Operation 29 'select' 'select_ln154' <Predicate = true> <Delay = 0.96> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_51 = bitselect i1 @_ssdm_op_BitSelect.i1.i48.i32, i48 %select_ln154, i32 47" [dbfs_project/resources/dbfs_converter.cpp:7]   --->   Operation 30 'bitselect' 'tmp_51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_57 = partselect i25 @_ssdm_op_PartSelect.i25.i48.i32.i32, i48 %select_ln154, i32 23, i32 47" [dbfs_project/resources/dbfs_converter.cpp:7]   --->   Operation 31 'partselect' 'tmp_57' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.85>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%shl_ln7 = bitconcatenate i72 @_ssdm_op_BitConcatenate.i72.i48.i24, i48 %select_ln154, i24 0" [dbfs_project/resources/dbfs_converter.cpp:7]   --->   Operation 32 'bitconcatenate' 'shl_ln7' <Predicate = (tmp_51)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (3.74ns)   --->   "%sub_ln7 = sub i72 0, i72 %shl_ln7" [dbfs_project/resources/dbfs_converter.cpp:7]   --->   Operation 33 'sub' 'sub_ln7' <Predicate = (tmp_51)> <Delay = 3.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.74> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_s = partselect i25 @_ssdm_op_PartSelect.i25.i72.i32.i32, i72 %sub_ln7, i32 47, i32 71" [dbfs_project/resources/dbfs_converter.cpp:7]   --->   Operation 34 'partselect' 'tmp_s' <Predicate = (tmp_51)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln7 = zext i25 %tmp_s" [dbfs_project/resources/dbfs_converter.cpp:7]   --->   Operation 35 'zext' 'zext_ln7' <Predicate = (tmp_51)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln7_1 = zext i25 %tmp_57" [dbfs_project/resources/dbfs_converter.cpp:7]   --->   Operation 36 'zext' 'zext_ln7_1' <Predicate = (!tmp_51)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (2.34ns)   --->   "%sub_ln7_1 = sub i26 0, i26 %zext_ln7" [dbfs_project/resources/dbfs_converter.cpp:7]   --->   Operation 37 'sub' 'sub_ln7_1' <Predicate = (tmp_51)> <Delay = 2.34> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.76ns)   --->   "%x = select i1 %tmp_51, i26 %sub_ln7_1, i26 %zext_ln7_1" [dbfs_project/resources/dbfs_converter.cpp:7]   --->   Operation 38 'select' 'x' <Predicate = true> <Delay = 0.76> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.57>
+ST_3 : Operation 39 [21/21] (6.57ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 39 'call' 'ref_tmp5' <Predicate = true> <Delay = 6.57> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 7.11>
+ST_4 : Operation 40 [20/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 40 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 7.11>
+ST_5 : Operation 41 [19/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 41 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 7.11>
+ST_6 : Operation 42 [18/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 42 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 7.11>
+ST_7 : Operation 43 [17/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 43 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 7.11>
+ST_8 : Operation 44 [16/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 44 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 7.11>
+ST_9 : Operation 45 [15/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 45 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 7.11>
+ST_10 : Operation 46 [14/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 46 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 7.11>
+ST_11 : Operation 47 [13/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 47 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 7.11>
+ST_12 : Operation 48 [12/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 48 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 7.11>
+ST_13 : Operation 49 [11/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 49 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 7.11>
+ST_14 : Operation 50 [10/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 50 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 7.11>
+ST_15 : Operation 51 [9/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 51 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 7.11>
+ST_16 : Operation 52 [8/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 52 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 7.11>
+ST_17 : Operation 53 [7/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 53 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 7.11>
+ST_18 : Operation 54 [6/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 54 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 7.11>
+ST_19 : Operation 55 [5/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 55 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 7.11>
+ST_20 : Operation 56 [4/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 56 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 21 <SV = 20> <Delay = 7.11>
+ST_21 : Operation 57 [3/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 57 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 21> <Delay = 7.11>
+ST_22 : Operation 58 [2/21] (7.11ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 58 'call' 'ref_tmp5' <Predicate = true> <Delay = 7.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 22> <Delay = 5.68>
+ST_23 : Operation 59 [1/21] (5.68ns)   --->   "%ref_tmp5 = call i28 @log10<48, 24>, i26 %x, i6 %log_apfixed_reduce_log_inverse_lut_table_array, i37 %log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array, i33 %log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array, i30 %log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array" [/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 59 'call' 'ref_tmp5' <Predicate = true> <Delay = 5.68> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 23> <Delay = 2.55>
+ST_24 : Operation 60 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i48 0"   --->   Operation 60 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 61 [1/1] (0.00ns)   --->   "%spectopmodule_ln3 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [dbfs_project/resources/dbfs_converter.cpp:3]   --->   Operation 61 'spectopmodule' 'spectopmodule_ln3' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 62 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i48 %linear_value"   --->   Operation 62 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 63 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %linear_value, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 63 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 64 [1/1] (0.00ns)   --->   "%shl_ln8 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i28.i4, i28 %ref_tmp5, i4 0" [dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 64 'bitconcatenate' 'shl_ln8' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 65 [1/1] (0.00ns)   --->   "%sext_ln8 = sext i32 %shl_ln8" [dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 65 'sext' 'sext_ln8' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 66 [1/1] (0.00ns)   --->   "%shl_ln8_1 = bitconcatenate i30 @_ssdm_op_BitConcatenate.i30.i28.i2, i28 %ref_tmp5, i2 0" [dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 66 'bitconcatenate' 'shl_ln8_1' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 67 [1/1] (0.00ns)   --->   "%sext_ln8_1 = sext i30 %shl_ln8_1" [dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 67 'sext' 'sext_ln8_1' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 68 [1/1] (2.55ns)   --->   "%add_ln8 = add i33 %sext_ln8, i33 %sext_ln8_1" [dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 68 'add' 'add_ln8' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 69 [1/1] (0.00ns)   --->   "%sext_ln8_2 = sext i33 %add_ln8" [dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 69 'sext' 'sext_ln8_2' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 70 [1/1] (0.00ns)   --->   "%ret_ln8 = ret i48 %sext_ln8_2" [dbfs_project/resources/dbfs_converter.cpp:8]   --->   Operation 70 'ret' 'ret_ln8' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 4.068ns
+The critical path consists of the following:
+	wire read operation ('linear_value', dbfs_project/resources/dbfs_converter.cpp:3) on port 'linear_value' (dbfs_project/resources/dbfs_converter.cpp:3) [10]  (0.000 ns)
+	'sub' operation 48 bit ('sub_ln152', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_round_copysign_apfixed.h:152->/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1396->dbfs_project/resources/dbfs_converter.cpp:7) [11]  (3.103 ns)
+	'select' operation 48 bit ('select_ln154', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_round_copysign_apfixed.h:154->/tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1396->dbfs_project/resources/dbfs_converter.cpp:7) [14]  (0.965 ns)
+
+ <State 2>: 6.860ns
+The critical path consists of the following:
+	'sub' operation 72 bit ('sub_ln7', dbfs_project/resources/dbfs_converter.cpp:7) [17]  (3.749 ns)
+	'sub' operation 26 bit ('sub_ln7_1', dbfs_project/resources/dbfs_converter.cpp:7) [22]  (2.344 ns)
+	'select' operation 26 bit ('x', dbfs_project/resources/dbfs_converter.cpp:7) [23]  (0.766 ns)
+
+ <State 3>: 6.571ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (6.571 ns)
+
+ <State 4>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 5>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 6>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 7>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 8>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 9>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 10>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 11>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 12>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 13>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 14>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 15>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 16>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 17>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 18>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 19>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 20>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 21>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 22>: 7.115ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (7.115 ns)
+
+ <State 23>: 5.681ns
+The critical path consists of the following:
+	'call' operation 28 bit ('ref_tmp5', /tools/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_math.h:1200->dbfs_project/resources/dbfs_converter.cpp:8) to 'log10<48, 24>' [24]  (5.681 ns)
+
+ <State 24>: 2.552ns
+The critical path consists of the following:
+	'add' operation 33 bit ('add_ln8', dbfs_project/resources/dbfs_converter.cpp:8) [29]  (2.552 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,136 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "/tools/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling apatb_dbfs_converter.cpp
+   Compiling dbfs_converter.cpp_pre.cpp.tb.cpp
+   Compiling dbfs_converter_tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_dbfs_converter_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Hello World!
+Linear value: -8.38861e+06. dBFS value: 0.
+Linear value: -8.38861e+06. dBFS value: 0.
+Linear value: -8.38861e+06. dBFS value: -1.19209e-06.
+Linear value: 8.38861e+06. dBFS value: -1.19209e-06.
+Linear value: 4.1943e+06. dBFS value: -6.0206.
+Linear value: -2.09715e+06. dBFS value: -12.0412.
+Linear value: 1.04858e+06. dBFS value: -18.0618.
+Linear value: -524288. dBFS value: -24.0824.
+Linear value: 1. dBFS value: -138.474.
+Linear value: -1. dBFS value: -138.474.
+Linear value: 0. dBFS value: 0.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_dbfs_converter_top glbl -Oenable_linking_all_libraries -prj dbfs_converter.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_16 -L floating_point_v7_0_21 --lib ieee_proposed=./ieee_proposed -s dbfs_converter 
+Multi-threading is on. Using 6 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter_mul_14ns_14ns_28_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dbfs_converter_mul_14ns_14ns_28_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_dbfs_converter_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dbfs_converter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter_log10_48_24_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dbfs_converter_log10_48_24_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter_log10_48_24_s_log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_ROM_AUTbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dbfs_converter_log10_48_24_s_log_apfixed_reduce_log0_lut_table_ap_fixed_0_5_64_array_ROM_AUTbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter_log10_48_24_s_log_apfixed_reduce_log_inverse_lut_table_array_ROM_AUTO_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dbfs_converter_log10_48_24_s_log_apfixed_reduce_log_inverse_lut_table_array_ROM_AUTO_1R
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter_log10_48_24_s_log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_ROM_AUTOcud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dbfs_converter_log10_48_24_s_log_apfixed_reduce_log_lut_table_ap_fixed_4_4_16_array_ROM_AUTOcud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter_log10_48_24_s_log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array_ROM_AUTOdEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dbfs_converter_log10_48_24_s_log_apfixed_reduce_log_lut_table_ap_fixed_7_6_64_array_ROM_AUTOdEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter_mul_30ns_6ns_36_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dbfs_converter_mul_30ns_6ns_36_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter_mul_37s_43ns_79_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dbfs_converter_mul_37s_43ns_79_3_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter_mul_38ns_4ns_42_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dbfs_converter_mul_38ns_4ns_42_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter_mul_58s_6ns_58_5_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dbfs_converter_mul_58s_6ns_58_5_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter_mul_6s_43ns_47_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dbfs_converter_mul_6s_43ns_47_3_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.dbfs_converter_log10_48_24_s_log...
+Compiling module xil_defaultlib.dbfs_converter_log10_48_24_s_log...
+Compiling module xil_defaultlib.dbfs_converter_log10_48_24_s_log...
+Compiling module xil_defaultlib.dbfs_converter_log10_48_24_s_log...
+Compiling module xil_defaultlib.dbfs_converter_mul_6s_43ns_47_3_...
+Compiling module xil_defaultlib.dbfs_converter_mul_30ns_6ns_36_2...
+Compiling module xil_defaultlib.dbfs_converter_mul_37s_43ns_79_3...
+Compiling module xil_defaultlib.dbfs_converter_mul_58s_6ns_58_5_...
+Compiling module xil_defaultlib.dbfs_converter_mul_38ns_4ns_42_2...
+Compiling module xil_defaultlib.dbfs_converter_mul_14ns_14ns_28_...
+Compiling module xil_defaultlib.dbfs_converter_log10_48_24_s
+Compiling module xil_defaultlib.dbfs_converter
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_dbfs_converter_top
+Compiling module work.glbl
+Built simulation snapshot dbfs_converter
+
+****** xsim v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/dbfs_converter/xsim_script.tcl
+# xsim {dbfs_converter} -autoloadwcfg -tclbatch {dbfs_converter.tcl}
+Time resolution is 1 ps
+source dbfs_converter.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 11 [0.00%] @ "125000"
+// RTL Simulation : 1 / 11 [100.00%] @ "375000"
+// RTL Simulation : 2 / 11 [100.00%] @ "615000"
+// RTL Simulation : 3 / 11 [100.00%] @ "855000"
+// RTL Simulation : 4 / 11 [100.00%] @ "1095000"
+// RTL Simulation : 5 / 11 [100.00%] @ "1335000"
+// RTL Simulation : 6 / 11 [100.00%] @ "1575000"
+// RTL Simulation : 7 / 11 [100.00%] @ "1815000"
+// RTL Simulation : 8 / 11 [100.00%] @ "2055000"
+// RTL Simulation : 9 / 11 [100.00%] @ "2295000"
+// RTL Simulation : 10 / 11 [100.00%] @ "2535000"
+// RTL Simulation : 11 / 11 [100.00%] @ "2775000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 2835 ns : File "/media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/hls_projects/dbfs_project/solution1/sim/verilog/dbfs_converter.autotb.v" Line 262
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Jul 13 18:36:51 2025...
+Hello World!
+Linear value: -8.38861e+06. dBFS value: 0.
+Linear value: -8.38861e+06. dBFS value: 0.
+Linear value: -8.38861e+06. dBFS value: -1.19209e-06.
+Linear value: 8.38861e+06. dBFS value: -1.19209e-06.
+Linear value: 4.1943e+06. dBFS value: -6.0206.
+Linear value: -2.09715e+06. dBFS value: -12.0412.
+Linear value: 1.04858e+06. dBFS value: -18.0618.
+Linear value: -524288. dBFS value: -24.0824.
+Linear value: 1. dBFS value: -138.474.
+Linear value: -1. dBFS value: -138.474.
+Linear value: 0. dBFS value: 0.
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

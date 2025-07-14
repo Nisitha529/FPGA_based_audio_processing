@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Jul 14 17:57:34 2025
+# Process ID: 77747
+# Current directory: /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.runs/fixed_point_multiplier_synth_1
+# Command line: vivado -log fixed_point_multiplier.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fixed_point_multiplier.tcl
+# Log file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.runs/fixed_point_multiplier_synth_1/fixed_point_multiplier.vds
+# Journal file: /media/nisitha/My_Passport/MOODLE/Vivado_projects/audio_zybo/zybo_audio_dsp/zybo_audio_dsp/zybo_audio_dsp.runs/fixed_point_multiplier_synth_1/vivado.jou
+# Running On: nisitha-laptop, OS: Linux, CPU Frequency: 1799.589 MHz, CPU Physical cores: 4, Host memory: 16471 MB
+#-----------------------------------------------------------
+source fixed_point_multiplier.tcl -notrace

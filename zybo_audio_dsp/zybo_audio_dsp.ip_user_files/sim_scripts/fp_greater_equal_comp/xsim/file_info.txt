@@ -1,0 +1,2 @@
+fp_greater_equal_comp.v,verilog,xil_defaultlib,../../../../zybo_audio_dsp.gen/sources_1/ip/fp_greater_equal_comp/sim/fp_greater_equal_comp.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
