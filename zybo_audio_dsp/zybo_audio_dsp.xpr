@@ -563,6 +563,7 @@
       </File>
       <File Path="$PGENDIR/sources_1/bd/bd_audio_processor/hdl/bd_audio_processor_wrapper.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
