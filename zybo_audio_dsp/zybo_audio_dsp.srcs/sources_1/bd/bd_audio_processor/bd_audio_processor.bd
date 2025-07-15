@@ -1,0 +1,1211 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x242CEFD97002B430",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../zybo_audio_dsp.gen/sources_1/bd/bd_audio_processor",
+      "name": "bd_audio_processor",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "audio_deserializer_0": "",
+      "debouncer_0": "",
+      "debounce_counter": "",
+      "fixed_to_float_conve_0": "",
+      "equalizer_0": "",
+      "enable_signal": "",
+      "delay_wrapper_0": "",
+      "limiter_0": "",
+      "limiter_threshold": "",
+      "clipper_0": "",
+      "float_to_fixed_conve_0": "",
+      "audio_serializer_0": "",
+      "led_meter_0": "",
+      "spi_controller_0": "",
+      "gnd": ""
+    },
+    "ports": {
+      "i_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "bd_audio_processor_i_clock_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "i_codec_bit_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "bd_audio_processor_i_codec_bit_clock_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "i_codec_lr_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "bd_audio_processor_i_codec_lr_clock_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "i_codec_adc_data": {
+        "direction": "I"
+      },
+      "i_sw0": {
+        "direction": "I"
+      },
+      "i_sw1": {
+        "direction": "I"
+      },
+      "i_sw2": {
+        "direction": "I"
+      },
+      "i_sw3": {
+        "direction": "I"
+      },
+      "i_sw4": {
+        "direction": "I"
+      },
+      "i_sw5": {
+        "direction": "I"
+      },
+      "i_sw6": {
+        "direction": "I"
+      },
+      "i_sw7": {
+        "direction": "I"
+      },
+      "i_btnu": {
+        "direction": "I"
+      },
+      "i_btnd": {
+        "direction": "I"
+      },
+      "i_btnl": {
+        "direction": "I"
+      },
+      "i_btnr": {
+        "direction": "I"
+      },
+      "i_btnc": {
+        "direction": "I"
+      },
+      "o_codec_dac_data": {
+        "direction": "O"
+      },
+      "o_led": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "i_spi_miso_0": {
+        "direction": "I"
+      },
+      "o_spi_clock": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "bd_audio_processor_spi_controller_0_0_o_spi_clock",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "o_spi_cs_n": {
+        "direction": "O"
+      },
+      "o_spi_mosi": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "audio_deserializer_0": {
+        "vlnv": "xilinx.com:module_ref:audio_deserializer:1.0",
+        "ip_revision": "1",
+        "xci_name": "bd_audio_processor_audio_deserializer_0_0",
+        "xci_path": "ip/bd_audio_processor_audio_deserializer_0_0/bd_audio_processor_audio_deserializer_0_0.xci",
+        "inst_hier_path": "audio_deserializer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "audio_deserializer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_codec_bit_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_codec_bit_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_codec_lr_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_codec_lr_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_codec_adc_data": {
+            "direction": "I"
+          },
+          "o_data_left": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "o_data_right": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "o_data_valid": {
+            "direction": "O"
+          }
+        }
+      },
+      "debouncer_0": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "ip_revision": "1",
+        "xci_name": "bd_audio_processor_debouncer_0_0",
+        "xci_path": "ip/bd_audio_processor_debouncer_0_0/bd_audio_processor_debouncer_0_0.xci",
+        "inst_hier_path": "debouncer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_switch_debounce_counter": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_button_debounce_counter": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "i_sw0": {
+            "direction": "I"
+          },
+          "i_sw1": {
+            "direction": "I"
+          },
+          "i_sw2": {
+            "direction": "I"
+          },
+          "i_sw3": {
+            "direction": "I"
+          },
+          "i_sw4": {
+            "direction": "I"
+          },
+          "i_sw5": {
+            "direction": "I"
+          },
+          "i_sw6": {
+            "direction": "I"
+          },
+          "i_sw7": {
+            "direction": "I"
+          },
+          "i_btnu": {
+            "direction": "I"
+          },
+          "i_btnd": {
+            "direction": "I"
+          },
+          "i_btnl": {
+            "direction": "I"
+          },
+          "i_btnr": {
+            "direction": "I"
+          },
+          "i_btnc": {
+            "direction": "I"
+          },
+          "o_sw0": {
+            "direction": "O"
+          },
+          "o_sw1": {
+            "direction": "O"
+          },
+          "o_sw2": {
+            "direction": "O"
+          },
+          "o_sw3": {
+            "direction": "O"
+          },
+          "o_sw4": {
+            "direction": "O"
+          },
+          "o_sw5": {
+            "direction": "O"
+          },
+          "o_sw6": {
+            "direction": "O"
+          },
+          "o_sw7": {
+            "direction": "O"
+          },
+          "o_btnu": {
+            "direction": "O"
+          },
+          "o_btnd": {
+            "direction": "O"
+          },
+          "o_btnl": {
+            "direction": "O"
+          },
+          "o_btnr": {
+            "direction": "O"
+          },
+          "o_btnc": {
+            "direction": "O"
+          }
+        }
+      },
+      "debounce_counter": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "8",
+        "xci_name": "bd_audio_processor_xlconstant_0_1",
+        "xci_path": "ip/bd_audio_processor_xlconstant_0_1/bd_audio_processor_xlconstant_0_1.xci",
+        "inst_hier_path": "debounce_counter",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "65535"
+          },
+          "CONST_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "fixed_to_float_conve_0": {
+        "vlnv": "xilinx.com:module_ref:fixed_to_float_converter:1.0",
+        "ip_revision": "1",
+        "xci_name": "bd_audio_processor_fixed_to_float_conve_0_0",
+        "xci_path": "ip/bd_audio_processor_fixed_to_float_conve_0_0/bd_audio_processor_fixed_to_float_conve_0_0.xci",
+        "inst_hier_path": "fixed_to_float_conve_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "fixed_to_float_converter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_data_valid": {
+            "direction": "I"
+          },
+          "i_data_left": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "i_data_right": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "o_data_valid": {
+            "direction": "O"
+          },
+          "o_data_left": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "o_data_right": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "equalizer_0": {
+        "vlnv": "xilinx.com:module_ref:equalizer:1.0",
+        "ip_revision": "1",
+        "xci_name": "bd_audio_processor_equalizer_0_0",
+        "xci_path": "ip/bd_audio_processor_equalizer_0_0/bd_audio_processor_equalizer_0_0.xci",
+        "inst_hier_path": "equalizer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "equalizer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_fir_enable": {
+            "direction": "I"
+          },
+          "i_iir_enable": {
+            "direction": "I"
+          },
+          "i_data_valid": {
+            "direction": "I"
+          },
+          "i_data_left": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "i_data_right": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "o_data_valid": {
+            "direction": "O"
+          },
+          "o_data_left": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "o_data_right": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "enable_signal": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "8",
+        "xci_name": "bd_audio_processor_xlconstant_0_2",
+        "xci_path": "ip/bd_audio_processor_xlconstant_0_2/bd_audio_processor_xlconstant_0_2.xci",
+        "inst_hier_path": "enable_signal"
+      },
+      "delay_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:delay_wrapper:1.0",
+        "ip_revision": "1",
+        "xci_name": "bd_audio_processor_delay_wrapper_0_0",
+        "xci_path": "ip/bd_audio_processor_delay_wrapper_0_0/bd_audio_processor_delay_wrapper_0_0.xci",
+        "inst_hier_path": "delay_wrapper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "delay_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_enable": {
+            "direction": "I"
+          },
+          "i_data_left": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "i_data_right": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "i_data_valid": {
+            "direction": "I"
+          },
+          "o_data_left": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "o_data_right": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "o_data_valid": {
+            "direction": "O"
+          }
+        }
+      },
+      "limiter_0": {
+        "vlnv": "xilinx.com:module_ref:limiter:1.0",
+        "ip_revision": "1",
+        "xci_name": "bd_audio_processor_limiter_0_0",
+        "xci_path": "ip/bd_audio_processor_limiter_0_0/bd_audio_processor_limiter_0_0.xci",
+        "inst_hier_path": "limiter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "limiter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_enable": {
+            "direction": "I"
+          },
+          "i_data_valid": {
+            "direction": "I"
+          },
+          "i_data_left": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "i_data_right": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "i_linear_threshold": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "o_data_valid": {
+            "direction": "O"
+          },
+          "o_data_left": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "o_data_right": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "limiter_threshold": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "8",
+        "xci_name": "bd_audio_processor_xlconstant_0_3",
+        "xci_path": "ip/bd_audio_processor_xlconstant_0_3/bd_audio_processor_xlconstant_0_3.xci",
+        "inst_hier_path": "limiter_threshold",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "4194032"
+          },
+          "CONST_WIDTH": {
+            "value": "32"
+          }
+        }
+      },
+      "clipper_0": {
+        "vlnv": "xilinx.com:module_ref:clipper:1.0",
+        "ip_revision": "1",
+        "xci_name": "bd_audio_processor_clipper_0_0",
+        "xci_path": "ip/bd_audio_processor_clipper_0_0/bd_audio_processor_clipper_0_0.xci",
+        "inst_hier_path": "clipper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clipper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_data_valid": {
+            "direction": "I"
+          },
+          "i_data_left": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "i_data_right": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "o_data_valid": {
+            "direction": "O"
+          },
+          "o_data_left": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "o_data_right": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "float_to_fixed_conve_0": {
+        "vlnv": "xilinx.com:module_ref:float_to_fixed_converter:1.0",
+        "ip_revision": "1",
+        "xci_name": "bd_audio_processor_float_to_fixed_conve_0_0",
+        "xci_path": "ip/bd_audio_processor_float_to_fixed_conve_0_0/bd_audio_processor_float_to_fixed_conve_0_0.xci",
+        "inst_hier_path": "float_to_fixed_conve_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "float_to_fixed_converter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_data_valid": {
+            "direction": "I"
+          },
+          "i_data_left": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "i_data_right": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "o_data_valid": {
+            "direction": "O"
+          },
+          "o_data_left": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "o_data_right": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "audio_serializer_0": {
+        "vlnv": "xilinx.com:module_ref:audio_serializer:1.0",
+        "ip_revision": "1",
+        "xci_name": "bd_audio_processor_audio_serializer_0_0",
+        "xci_path": "ip/bd_audio_processor_audio_serializer_0_0/bd_audio_processor_audio_serializer_0_0.xci",
+        "inst_hier_path": "audio_serializer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "audio_serializer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_codec_bit_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_codec_bit_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_codec_lr_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_codec_lr_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "o_codec_dac_data": {
+            "direction": "O"
+          },
+          "i_data_left": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "i_data_right": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "i_data_valid": {
+            "direction": "I"
+          }
+        }
+      },
+      "led_meter_0": {
+        "vlnv": "xilinx.com:module_ref:led_meter:1.0",
+        "ip_revision": "1",
+        "xci_name": "bd_audio_processor_led_meter_0_0",
+        "xci_path": "ip/bd_audio_processor_led_meter_0_0/bd_audio_processor_led_meter_0_0.xci",
+        "inst_hier_path": "led_meter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "led_meter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_data_valid": {
+            "direction": "I"
+          },
+          "i_data_left": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "i_data_right": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "o_led": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "spi_controller_0": {
+        "vlnv": "xilinx.com:module_ref:spi_controller:1.0",
+        "ip_revision": "1",
+        "xci_name": "bd_audio_processor_spi_controller_0_0",
+        "xci_path": "ip/bd_audio_processor_spi_controller_0_0/bd_audio_processor_spi_controller_0_0.xci",
+        "inst_hier_path": "spi_controller_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "spi_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "i_reset",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "bd_audio_processor_i_clock_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "i_reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "i_enable": {
+            "direction": "I"
+          },
+          "i_spi_miso": {
+            "direction": "I"
+          },
+          "o_spi_clock": {
+            "type": "clk",
+            "direction": "O"
+          },
+          "o_spi_cs_n": {
+            "direction": "O"
+          },
+          "o_spi_mosi": {
+            "direction": "O"
+          }
+        }
+      },
+      "gnd": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "8",
+        "xci_name": "bd_audio_processor_xlconstant_0_4",
+        "xci_path": "ip/bd_audio_processor_xlconstant_0_4/bd_audio_processor_xlconstant_0_4.xci",
+        "inst_hier_path": "gnd",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "audio_deserializer_0_o_data_left": {
+        "ports": [
+          "audio_deserializer_0/o_data_left",
+          "fixed_to_float_conve_0/i_data_left"
+        ]
+      },
+      "audio_deserializer_0_o_data_right": {
+        "ports": [
+          "audio_deserializer_0/o_data_right",
+          "fixed_to_float_conve_0/i_data_right"
+        ]
+      },
+      "audio_deserializer_0_o_data_valid": {
+        "ports": [
+          "audio_deserializer_0/o_data_valid",
+          "fixed_to_float_conve_0/i_data_valid"
+        ]
+      },
+      "audio_serializer_0_o_codec_dac_data": {
+        "ports": [
+          "audio_serializer_0/o_codec_dac_data",
+          "o_codec_dac_data"
+        ]
+      },
+      "clipper_0_o_data_left": {
+        "ports": [
+          "clipper_0/o_data_left",
+          "float_to_fixed_conve_0/i_data_left"
+        ]
+      },
+      "clipper_0_o_data_right": {
+        "ports": [
+          "clipper_0/o_data_right",
+          "float_to_fixed_conve_0/i_data_right"
+        ]
+      },
+      "clipper_0_o_data_valid": {
+        "ports": [
+          "clipper_0/o_data_valid",
+          "float_to_fixed_conve_0/i_data_valid"
+        ]
+      },
+      "debounce_counter_dout": {
+        "ports": [
+          "debounce_counter/dout",
+          "debouncer_0/i_switch_debounce_counter",
+          "debouncer_0/i_button_debounce_counter"
+        ]
+      },
+      "debouncer_0_o_btnc": {
+        "ports": [
+          "debouncer_0/o_btnc",
+          "spi_controller_0/i_enable"
+        ]
+      },
+      "debouncer_0_o_sw0": {
+        "ports": [
+          "debouncer_0/o_sw0",
+          "delay_wrapper_0/i_enable"
+        ]
+      },
+      "debouncer_0_o_sw2": {
+        "ports": [
+          "debouncer_0/o_sw2",
+          "limiter_0/i_enable"
+        ]
+      },
+      "delay_wrapper_0_o_data_left": {
+        "ports": [
+          "delay_wrapper_0/o_data_left",
+          "limiter_0/i_data_left"
+        ]
+      },
+      "delay_wrapper_0_o_data_right": {
+        "ports": [
+          "delay_wrapper_0/o_data_right",
+          "limiter_0/i_data_right"
+        ]
+      },
+      "delay_wrapper_0_o_data_valid": {
+        "ports": [
+          "delay_wrapper_0/o_data_valid",
+          "limiter_0/i_data_valid"
+        ]
+      },
+      "enable_signal_dout": {
+        "ports": [
+          "enable_signal/dout",
+          "equalizer_0/i_fir_enable",
+          "equalizer_0/i_iir_enable"
+        ]
+      },
+      "equalizer_0_o_data_left": {
+        "ports": [
+          "equalizer_0/o_data_left",
+          "delay_wrapper_0/i_data_left"
+        ]
+      },
+      "equalizer_0_o_data_right": {
+        "ports": [
+          "equalizer_0/o_data_right",
+          "delay_wrapper_0/i_data_right"
+        ]
+      },
+      "equalizer_0_o_data_valid": {
+        "ports": [
+          "equalizer_0/o_data_valid",
+          "delay_wrapper_0/i_data_valid"
+        ]
+      },
+      "fixed_to_float_conve_0_o_data_left": {
+        "ports": [
+          "fixed_to_float_conve_0/o_data_left",
+          "equalizer_0/i_data_left"
+        ]
+      },
+      "fixed_to_float_conve_0_o_data_right": {
+        "ports": [
+          "fixed_to_float_conve_0/o_data_right",
+          "equalizer_0/i_data_right"
+        ]
+      },
+      "fixed_to_float_conve_0_o_data_valid": {
+        "ports": [
+          "fixed_to_float_conve_0/o_data_valid",
+          "equalizer_0/i_data_valid"
+        ]
+      },
+      "float_to_fixed_conve_0_o_data_left": {
+        "ports": [
+          "float_to_fixed_conve_0/o_data_left",
+          "audio_serializer_0/i_data_left",
+          "led_meter_0/i_data_left"
+        ]
+      },
+      "float_to_fixed_conve_0_o_data_right": {
+        "ports": [
+          "float_to_fixed_conve_0/o_data_right",
+          "audio_serializer_0/i_data_right",
+          "led_meter_0/i_data_right"
+        ]
+      },
+      "float_to_fixed_conve_0_o_data_valid": {
+        "ports": [
+          "float_to_fixed_conve_0/o_data_valid",
+          "audio_serializer_0/i_data_valid",
+          "led_meter_0/i_data_valid"
+        ]
+      },
+      "gnd_dout": {
+        "ports": [
+          "gnd/dout",
+          "spi_controller_0/i_reset"
+        ]
+      },
+      "i_btnc_0_1": {
+        "ports": [
+          "i_btnc",
+          "debouncer_0/i_btnc"
+        ]
+      },
+      "i_btnd_0_1": {
+        "ports": [
+          "i_btnd",
+          "debouncer_0/i_btnd"
+        ]
+      },
+      "i_btnl_0_1": {
+        "ports": [
+          "i_btnl",
+          "debouncer_0/i_btnl"
+        ]
+      },
+      "i_btnr_0_1": {
+        "ports": [
+          "i_btnr",
+          "debouncer_0/i_btnr"
+        ]
+      },
+      "i_btnu_0_1": {
+        "ports": [
+          "i_btnu",
+          "debouncer_0/i_btnu"
+        ]
+      },
+      "i_clock_0_1": {
+        "ports": [
+          "i_clock",
+          "audio_deserializer_0/i_clock",
+          "debouncer_0/i_clock",
+          "fixed_to_float_conve_0/i_clock",
+          "equalizer_0/i_clock",
+          "delay_wrapper_0/i_clock",
+          "limiter_0/i_clock",
+          "clipper_0/i_clock",
+          "float_to_fixed_conve_0/i_clock",
+          "audio_serializer_0/i_clock",
+          "led_meter_0/i_clock",
+          "spi_controller_0/i_clock"
+        ]
+      },
+      "i_codec_adc_data_0_1": {
+        "ports": [
+          "i_codec_adc_data",
+          "audio_deserializer_0/i_codec_adc_data"
+        ]
+      },
+      "i_codec_bit_clock_0_1": {
+        "ports": [
+          "i_codec_bit_clock",
+          "audio_deserializer_0/i_codec_bit_clock",
+          "audio_serializer_0/i_codec_bit_clock"
+        ]
+      },
+      "i_codec_lr_clock_0_1": {
+        "ports": [
+          "i_codec_lr_clock",
+          "audio_deserializer_0/i_codec_lr_clock",
+          "audio_serializer_0/i_codec_lr_clock"
+        ]
+      },
+      "i_spi_miso_0_1": {
+        "ports": [
+          "i_spi_miso_0",
+          "spi_controller_0/i_spi_miso"
+        ]
+      },
+      "i_sw0_0_1": {
+        "ports": [
+          "i_sw0",
+          "debouncer_0/i_sw0"
+        ]
+      },
+      "i_sw1_0_1": {
+        "ports": [
+          "i_sw1",
+          "debouncer_0/i_sw1"
+        ]
+      },
+      "i_sw2_0_1": {
+        "ports": [
+          "i_sw2",
+          "debouncer_0/i_sw2"
+        ]
+      },
+      "i_sw3_0_1": {
+        "ports": [
+          "i_sw3",
+          "debouncer_0/i_sw3"
+        ]
+      },
+      "i_sw4_0_1": {
+        "ports": [
+          "i_sw4",
+          "debouncer_0/i_sw4"
+        ]
+      },
+      "i_sw5_0_1": {
+        "ports": [
+          "i_sw5",
+          "debouncer_0/i_sw5"
+        ]
+      },
+      "i_sw6_0_1": {
+        "ports": [
+          "i_sw6",
+          "debouncer_0/i_sw6"
+        ]
+      },
+      "i_sw7_0_1": {
+        "ports": [
+          "i_sw7",
+          "debouncer_0/i_sw7"
+        ]
+      },
+      "led_meter_0_o_led": {
+        "ports": [
+          "led_meter_0/o_led",
+          "o_led"
+        ]
+      },
+      "limiter_0_o_data_left": {
+        "ports": [
+          "limiter_0/o_data_left",
+          "clipper_0/i_data_left"
+        ]
+      },
+      "limiter_0_o_data_right": {
+        "ports": [
+          "limiter_0/o_data_right",
+          "clipper_0/i_data_right"
+        ]
+      },
+      "limiter_0_o_data_valid": {
+        "ports": [
+          "limiter_0/o_data_valid",
+          "clipper_0/i_data_valid"
+        ]
+      },
+      "limiter_threshold_dout": {
+        "ports": [
+          "limiter_threshold/dout",
+          "limiter_0/i_linear_threshold"
+        ]
+      },
+      "spi_controller_0_o_spi_clock": {
+        "ports": [
+          "spi_controller_0/o_spi_clock",
+          "o_spi_clock"
+        ]
+      },
+      "spi_controller_0_o_spi_cs_n": {
+        "ports": [
+          "spi_controller_0/o_spi_cs_n",
+          "o_spi_cs_n"
+        ]
+      },
+      "spi_controller_0_o_spi_mosi": {
+        "ports": [
+          "spi_controller_0/o_spi_mosi",
+          "o_spi_mosi"
+        ]
+      }
+    }
+  }
+}
